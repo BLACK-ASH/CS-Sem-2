@@ -16,14 +16,13 @@ This repository is a central hub for academic resources, aimed at helping fellow
 ## 🛠️ How to Use
 1. Clone the repository:
     ```bash
-     git add README.md
-     git commit -m "Added README"
-     git push
-     ```
+     git clone https://github.com/BLACK-ASH/CS-Sem-2.git
+    ```
 2. Browse the folders to find the material relevant to your needs.
-✍️ Contributions
+
+##✍️ Contributions
 Suggestions and contributions are welcome! Submit a pull request to improve or expand the repository.
 
-⚠️ Disclaimer
+##⚠️ Disclaimer
 All resources are shared for educational purposes only. Please adhere to your institution's academic integrity guidelines when using this content.
 
