@@ -13,7 +13,6 @@ def sumAlgorithm1(n):
 
 # Sum Algorithm Using Formula
 def sumAlgorithm2(n):
-    sum = 0
     startTime = time.perf_counter()
     sum = (n * (n + 1)) / 2
     endTime = time.perf_counter()
