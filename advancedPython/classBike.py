@@ -1,6 +1,7 @@
 class Bike:
     name = ""
     gear = 0
+
 B1 = Bike()
 B1.name = "Ducati"
 B1.gear = 5
