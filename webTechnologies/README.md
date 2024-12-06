@@ -1,42 +1,42 @@
-## INDEX
+# INDEX
 
-# Practical No 1
+## Practical No 1
 - Aim : 
 - Date :
 
-# Practical No 2
+## Practical No 2
 - Aim :
 - Date :
 
-# Practical No 3
+## Practical No 3
 - Aim :
 - Date :
 
-# Practical No 4
+## Practical No 4
 - Aim :
 - Date :
 
-# Practical No 5
+## Practical No 5
 - Aim :
 - Date :
 
-# Practical No 6
+## Practical No 6
 - Aim :
 - Date :
 
-# Practical No 7
+## Practical No 7
 - Aim :
 - Date :
 
-# Practical No 8
+## Practical No 8
 - Aim :
 - Date :
 
-# Practical No 8
+## Practical No 8
 - Aim :
 - Date :
 
-# Practical No 10
+## Practical No 10
 - Aim :
 - Date :
 
