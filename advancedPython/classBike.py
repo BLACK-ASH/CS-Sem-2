@@ -17,6 +17,7 @@ B3.gear = 6
 B4 = Bike()
 B4.name = "Nissan"
 B4.gear = 5
+
 print("----------------------------Bike-----------------------------")
 print("Your bike name",B1.name,"has gear ",B1.gear)
 print("-------------------------------------------------------------")
