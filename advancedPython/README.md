@@ -5,7 +5,7 @@
 - Date : 4/12/24
 
 ## Practical No 2
-- Aim : Write A Program To Implement Different Methods In Python
+- Aim : Write A Program To Implement Different Methods In Python.
 - Date : 11/12/24
 
 ## Practical No 3
