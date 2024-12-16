@@ -18,6 +18,7 @@ class Employee:
 # Taking Choice
 choice = "y"
 
+# Creating Input Function For Employee
 def employeeInput():
     # Taking Input For Number Of Employees
     numOfEmployees = 0
@@ -25,8 +26,6 @@ def employeeInput():
     # Handling Invalid Input
     while numOfEmployees < 1:
       numOfEmployees = int(input("Enter Number Of Employees : "))
-
-
 
     # Taking Input For Each Employee
     for i in range(numOfEmployees):
@@ -42,7 +41,6 @@ def employeeInput():
     global choice
     choice = input("Enter Your Choice (y/n) : ").lower()
 
-
-
+# Taking User Choice If He/She Wants To Continue
 while "y"== choice:
     employeeInput()
