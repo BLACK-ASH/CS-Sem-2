@@ -4,7 +4,9 @@ employees = []
 # Creating Employee Class
 class Employee:
     def __init__(self,name):
-        self.id = "emp"+ str(len(employees)) 
+        # Auto Id
+        count=len(employees)
+        self.id = "emp"+ str(count)
         self.name = name
 
     def display(self):
