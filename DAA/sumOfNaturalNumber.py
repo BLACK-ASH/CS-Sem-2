@@ -1,4 +1,9 @@
 import time
+import matplotlib.pyplot as plt
+
+# Time For Each Algorithm
+sumAlgorithm1Time = []
+sumAlgorithm2Time = []
 
 # Sum Algorithm Using Loop
 def sumAlgorithm1(n):
@@ -8,6 +13,7 @@ def sumAlgorithm1(n):
         sum += i
     endTime = time.perf_counter()
     timeUsed = endTime - startTime
+    sumAlgorithm1Time.append(timeUsed)
     print("The Sum Of Natural Number From 1 To ",n,"Is ",sum,)
     print("Time Used ",timeUsed)
 
@@ -17,8 +23,28 @@ def sumAlgorithm2(n):
     sum = (n * (n + 1)) / 2
     endTime = time.perf_counter()
     timeUsed = endTime - startTime
+    sumAlgorithm2Time.append(timeUsed)
     print("The Sum Of Natural Number From 1 To ",n,"Is ",sum)
     print("Time Used ",timeUsed)
-    
-sumAlgorithm1(1000)
-sumAlgorithm2(1000)
+# For Testing Function    
+#sumAlgorithm1(100000)
+#sumAlgorithm2(100000)
+
+# Creating Input List
+inputList = range(1,5000000,50000)
+
+# Runing The Algorithm
+for input in inputList:
+    sumAlgorithm1(input)
+    sumAlgorithm2(input)
+
+
+# Plotting the time comparison between both algorithms
+plt.plot(inputList, sumAlgorithm1Time, label="Algorithm 1 (Loop)", color='blue')
+plt.plot(inputList, sumAlgorithm2Time, label="Algorithm 2 (Formula)", color='red')
+
+plt.xlabel("Value of n")
+plt.ylabel("Time (seconds)")
+plt.title("Comparison of Sum Algorithms")
+plt.legend()
+plt.show()
