@@ -20,3 +20,5 @@ def sumAlgorithm2(n):
     print("The Sum Of Natural Number From 1 To ",n,"Is ",sum)
     print("Time Used ",timeUsed)
     
+sumAlgorithm1(1000)
+sumAlgorithm2(1000)
