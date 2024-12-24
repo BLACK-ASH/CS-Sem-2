@@ -18,8 +18,8 @@ class Node:
         return self.nextNode
 
     # Setting The Next Node
-    def setNextNode(self,data):
-        self.nextNode = data
+    def setNextNode(self,reference):
+        self.nextNode = reference
 
 # Making The Linked List Class
 class LinkedList:
@@ -66,7 +66,7 @@ class LinkedList:
     def deleteNode(self,key):
         temp = self.head
         if (temp is not None):
-            if (temp,data == key):
+            if (temp.data == key):
                 self.head == temp.nextNode
                 temp = None
                 return
@@ -77,7 +77,9 @@ class LinkedList:
             temp = temp.nextNode
         if (temp == None):
             return
-        
-                
+        prev.nextNode = temp.nextNode
+        temp = None
+        self.size -= 1
+               
                 
                 
