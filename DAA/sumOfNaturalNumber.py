@@ -31,7 +31,7 @@ def sumAlgorithm2(n):
 #sumAlgorithm2(100000)
 
 # Creating Input List
-inputList = range(1,2500000,50000)
+inputList = range(1,250000,50000)
 
 # Runing The Algorithm
 for input in inputList:
