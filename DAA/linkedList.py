@@ -40,20 +40,29 @@ class LinkedList:
         return True
 
     # Adding A Node In A Certain Position In A Linked List
-    def addNodeAtPos(self,data,pos):
-        newNode = Node(data,pos)
-        currentNode = self.head
-        currentPosition = 0
-        while True:
-            if currentPosition == pos:
-                previousNode.nextNode = newNode
-                newNode.nextNode = currentNode
-                self.size += 1
-                return True
-            else:
-                previousNode = currentNode
+    def addNodeAtPos(self, data, pos):
+        if pos < 0:
+            print("Position cannot be negative")
+            return False
+        newNode = Node(data)
+        if pos == 0:
+            newNode.nextNode = self.head
+            self.head = newNode
+        else:
+            currentNode = self.head
+            currentPosition = 0
+            while currentNode and currentPosition < pos - 1:
                 currentNode = currentNode.nextNode
                 currentPosition += 1
+    
+            if currentNode is None:
+                print("Position is out of range")
+                return False
+            newNode.nextNode = currentNode.nextNode
+            currentNode.nextNode = newNode
+            self.size += 1
+            return True
+       
 
     # Printint The Node
     def printNode(self):
@@ -106,8 +115,10 @@ mylist = LinkedList()
 mylist.addNode(40)
 mylist.addNode(4)
 mylist.addNode(14)
+mylist.addNodeAtPos(55,3)
 mylist.addNode(24)
 mylist.addNode(34)
+mylist.printNode()
 print("The Largest Number  In A List Is : ",mylist.maximum())
 print("The Smallest Number  In A List Is : ",mylist.minimum())
 print("The Difference In Largest And Smallest In A List : ",mylist.maximum()-mylist.minimum())
