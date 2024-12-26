@@ -64,7 +64,7 @@ class LinkedList:
             return True
        
 
-    # Printint The Node
+    # Printing The Node
     def printNode(self):
         curr = self.head
         while curr:
@@ -72,24 +72,29 @@ class LinkedList:
             curr = curr.getNextNode()
 
     # Deleting A Node
-    def deleteNode(self,key):
+    def deleteNode(self, key):
         temp = self.head
-        if (temp is not None):
-            if (temp.data == key):
-                self.head == temp.nextNode
-                temp = None
-                return
-        while (temp is not None):
+
+        # Case 1: The head node itself holds the key
+        if temp is not None and temp.data == key:
+            self.head = temp.nextNode  # Change the head
+            temp = None  # Free memory
+            self.size -= 1
+            return  # Exit after deletion
+
+        # Case 2: Traverse the list to find the key
+        prev = None
+        while temp is not None:
             if temp.data == key:
-                break
+                prev.nextNode = temp.nextNode  # Unlink the node
+                temp = None  # Free memory
+                self.size -= 1
+                return  # Exit after deletion
             prev = temp
             temp = temp.nextNode
-        if (temp == None):
-            return
-        prev.nextNode = temp.nextNode
-        temp = None
-        self.size -= 1
-        return True
+
+        # Case 3: Key not found
+        print(f"Key {key} not found in the list.")
 
     # Maximum In A List
     def maximum(self):
@@ -111,14 +116,38 @@ class LinkedList:
             curr = curr.getNextNode()
         return minElement
 
+
+# Testing The Code 
+
+# Creating The Linked List
 mylist = LinkedList()
+
+# Adding Nodes / Elements
+mylist.addNode(10)
 mylist.addNode(40)
 mylist.addNode(4)
 mylist.addNode(14)
+mylist.addNode(14)
+
+# Adding A Node At A Certain Position
+print("The Size Of The List Is Before Adding A Node At A Certain Position: ",mylist.getSize())
 mylist.addNodeAtPos(55,3)
+print("The Size Of The List Is After Adding A Node At A Certain Position: ",mylist.getSize())
+
 mylist.addNode(24)
 mylist.addNode(34)
+
+# Printing The Linked List
+print("The Linked List Is : ")
 mylist.printNode()
+
+# Maximum And Minimum 
 print("The Largest Number  In A List Is : ",mylist.maximum())
 print("The Smallest Number  In A List Is : ",mylist.minimum())
 print("The Difference In Largest And Smallest In A List : ",mylist.maximum()-mylist.minimum())
+
+# Deleting A Node
+print("The Size Of The List Is Before Deleting A Node : ",mylist.getSize())
+mylist.deleteNode(14)
+print("The Size Of The List Is After Deleting A Node : ",mylist.getSize())
+mylist.printNode()
