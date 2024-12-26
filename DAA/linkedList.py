@@ -80,6 +80,34 @@ class LinkedList:
         prev.nextNode = temp.nextNode
         temp = None
         self.size -= 1
-               
-                
-                
+        return True
+
+    # Maximum In A List
+    def maximum(self):
+        curr = self.head
+        maxElement = curr.data
+        while curr:
+            if maxElement < curr.data:
+                maxElement = curr.data
+            curr = curr.getNextNode()
+        return maxElement
+
+    # Minimum In A List
+    def minimum(self):
+        curr = self.head
+        minElement = curr.data
+        while curr:
+            if minElement > curr.data:
+                minElement = curr.data
+            curr = curr.getNextNode()
+        return minElement
+
+mylist = LinkedList()
+mylist.addNode(40)
+mylist.addNode(4)
+mylist.addNode(14)
+mylist.addNode(24)
+mylist.addNode(34)
+print("The Largest Number  In A List Is : ",mylist.maximum())
+print("The Smallest Number  In A List Is : ",mylist.minimum())
+print("The Difference In Largest And Smallest In A List : ",mylist.maximum()-mylist.minimum())
