@@ -9,3 +9,4 @@ obj = Static()
 
 # Calling
 print(obj.call())
+print(Static.call())
