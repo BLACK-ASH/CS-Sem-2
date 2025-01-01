@@ -1,8 +1,8 @@
 # INDEX
 
 ## Practical No 1
-- Aim :
-- Date : 
+- Aim : Write A Program To Find Area Of Circle Using Obejct Oreinted Programming Such That The Class Circle Must Have Three Member Functions Namely : (read,compute,display)
+- Date : 01/01/2025
 
 ## Practical No 2
 - Aim :
