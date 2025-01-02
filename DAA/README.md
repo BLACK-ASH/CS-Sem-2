@@ -5,12 +5,12 @@
 - Date : 3/12/24
 
 ## Practical No 2
-- Aim :
-- Date :
+- Aim : Write A Program For Creating A Linked List
+- Date : 5/12/24
 
 ## Practical No 3
-- Aim :
-- Date :
+- Aim : Write A Program To Implement Linked List On A Company
+- Date : 2/1/25
 
 ## Practical No 4
 - Aim :
