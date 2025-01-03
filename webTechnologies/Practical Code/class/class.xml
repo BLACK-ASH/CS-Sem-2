@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="class.xslt"?>
+<class>
+    <book bid="B342">
+        <bname>Python</bname>
+        <author>Sneha</author>
+        <publisher>Python Org</publisher>
+        <price>345</price>
+    </book>
+    <book bid="B342">
+        <bname>Java Developer</bname>
+        <author>Charul Singh</author>
+        <publisher>Java Publisher</publisher>
+        <price>365</price>
+    </book>
+    <book bid="B342">
+        <bname>Linux Operating System</bname>
+        <author>Mugdha Mohan Karekar</author>
+        <publisher>Debain</publisher>
+        <price>400</price>
+    </book>
+</class>
