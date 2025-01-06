@@ -1,46 +1,24 @@
-# Creating List Of Employees
-employees = []
-
-# Creating Employee Class
 class Employee:
-    def __init__(self,name):
-        # Auto Id
-        count=len(employees)
-        self.id = "emp"+ str(count)
+    def __init__(self,id,name):
+        self.id = id
         self.name = name
 
     def display(self):
-        print("ID : %s\nName : %s"%(self.id,self.name))
+        print("Employee ID : ",self.id)
+        print("Employee Name : ",self.name)
 
-    def __del__(self):
-        print("Object Destroyed")
+n = int(input("Enter The Number Of Employee : "))
 
-# Taking Choice
-choice = "y"
+while 1 > n:
+    n= int(input("Enter A Positive Number : "))
 
-# Creating Input Function For Employee
-def employeeInput():
-    # Taking Input For Number Of Employees
-    numOfEmployees = 0
+employees = []
 
-    # Handling Invalid Input
-    while numOfEmployees < 1:
-      numOfEmployees = int(input("Enter Number Of Employees : "))
+for i in range (n):
+    print("Enter The Information Of Employee No ",i+1)
+    id = input("Enter The Id : ")
+    name = input("Enter The Name : ")
+    employees.append(Employee(id,name))
 
-    # Taking Input For Each Employee
-    for i in range(numOfEmployees):
-        print("Employee %d"%(i+1))
-        name = input("Enter Name : ")
-        employees.append(Employee(name))
-
-    # Displaying Each Employee
-    for employee in employees:
-        employee.display()
-
-    # Asking If User Wants To Continue
-    global choice
-    choice = input("Enter Your Choice (y/n) : ").lower()
-
-# Taking User Choice If He/She Wants To Continue
-while "y"== choice:
-    employeeInput()
+for emp in employees:
+    emp.display()
