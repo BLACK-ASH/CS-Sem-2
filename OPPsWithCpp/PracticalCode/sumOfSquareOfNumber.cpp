@@ -6,7 +6,7 @@ class Sum
 {
 public:
     // Declaring Variable
-    int num, sum =0, squareSum =0 ;
+    int num, sum = 0, squareSum = 0;
 
     void read()
     {
