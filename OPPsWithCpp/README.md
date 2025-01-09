@@ -5,8 +5,8 @@
 - Date : 01/01/2025
 
 ## Practical No 2
-- Aim :
-- Date :
+- Aim : Program Based On Branching And Looping Statement Using Class
+- Date : 09/01/2025
 
 ## Practical No 3
 - Aim :
