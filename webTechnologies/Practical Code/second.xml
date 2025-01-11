@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+
+<nitf>
+    <head>
+        <title>
+            Colombia Earthquake
+        </title>
+    </head>
+    <body>
+        <headline>
+            <h1>
+                143 Dead in Colombia Earthquake
+            </h1>
+        </headline>
+        <byline>
+            <bytag>
+                By Jared Kotler , Associated Press Writer </bytag>
+        </byline>
+        <news>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore repellat veniam
+            officia velit cum alias inventore molestias, omnis dolor veniam quibusdam natus quae
+            enim ab necessitatibus. Rerum asperiores repellendus sed perferendis quaerat!
+        </news>
+        <br></br>
+        <dateline>
+            <location>
+                Bogota , Colombia
+            </location>
+            <date>
+                Monday January 25 1999 7:28 ET
+            </date>
+        </dateline>
+    </body>
+</nitf>
