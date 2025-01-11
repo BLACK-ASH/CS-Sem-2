@@ -1,0 +1,7 @@
+<html>
+<body>
+<marquee>
+<p>FYCS</p>
+</marquee>
+</body>
+</html>
