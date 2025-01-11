@@ -9,8 +9,8 @@
 - Date : 11/12/24
 
 ## Practical No 3
-- Aim :write a program to implement different method to do polymorphism,operator overloading and overriding in python
-- Date : 06/01/25
+- Aim : Write A Program To Implement Different Method To Do Polymorphism,Operator Overloading And Overriding In Python.
+- Date : 09/01/25
 
 ## Practical No 4
 - Aim :
