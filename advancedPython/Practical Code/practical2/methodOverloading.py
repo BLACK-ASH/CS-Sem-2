@@ -1,14 +1,6 @@
-#2
-#inher
-#overloading
-#super
-#3
-#poly
-#duck
-#overrinding
 
 class Example:
-    def add(self,a,b,c=None):
+    def add(self,a=None,b=None,c=None):
         x=0
         if a and b and c != None :
             x = a+b+c
