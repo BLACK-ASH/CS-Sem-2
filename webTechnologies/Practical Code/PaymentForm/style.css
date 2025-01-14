@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    text-align: center;
+    font-size: 2rem;
+    color: brown;
+    padding: 2rem;
+    border-bottom: 1px solid gray;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+section{
+    padding: 2rem;
+}
+
+form{
+    text-align: center;
+    font-size: large;
+}
+
+form div {
+    border: 1px solid gray;
+    margin: 8px 0;
+    padding: 6px;
+}
+
+label{
+    font-weight: 700;
+}
+
+input ,select{
+    margin-top: 1rem;
+    padding: 3px;
+}
+
+div p{
+    text-align: start;
+    font-weight: 700;
+    font-size: larger;
+}

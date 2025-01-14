@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ashif - Form</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>
+            Payment Form
+        </h1>
+    </nav>
+    <section class="per-info">
+        <h2>Personal Information</h2>
+        <form action="">
+            <!-- First Name -->
+            <label for="first-name">First Name : </label>
+            <input name="first-name" id="first-name" type="text">
+            <br>
+
+            <!-- Last Name -->
+            <label for="last-name">Last Name : </label>
+            <input name="last-name" id="last-name" type="text">
+            <br>
+
+            <!-- Email ID -->
+            <label for="email-id">Email ID : </label>
+            <input name="email-id" id="email-id" type="email">
+            <br>
+
+            <!-- Mobile No -->
+            <label for="mobile-no">Mobile No : </label>
+            <input name="mobile-no" id="mobile-no" type="text">
+            <br>
+
+            <!-- Gender -->
+            <div>
+                <p>Gender</p>
+
+                <label for="gender">Gender : </label>
+
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" id="female">
+                <label for="male">Female</label>
+
+                <input type="radio" name="gender" id="Transgender">
+                <label for="male">Transgender</label>
+
+            </div>
+
+            <!-- Password  -->
+            <label for="mobile-no"> Password : </label>
+            <input name="mobile-no" type="password">
+            <br>
+
+        </form>
+
+    </section>
+    <section>
+        <h2>Payment Method </h2>
+        <form action="">
+            <!-- Card Type -->
+            <label for="card-type">Card Type : </label>
+            <select name="card-type" id="card-type">
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="american-express">American Express</option>
+            </select>
+            <br>
+
+            <!-- Card Number -->
+            <label for="card-number">Card Number : </label>
+            <input type="text" name="card-number" id="card-number">
+            <br>
+
+            <!-- Expiry Date -->
+            <label for="expiry-date">Expiry Date : </label>
+            <input type="date" name="expiry-date" id="expiry-date">
+            <br>
+
+        </form>
+    </section>
+</body>
+
+</html>
