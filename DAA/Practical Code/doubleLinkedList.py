@@ -19,7 +19,7 @@ class DoubleLinkedList:
 
         return True
 
-    def insert(self,key,data):
+    def insertBefore(self,key,data):
         curr = self.head
         
         # To Handling Base Case
@@ -52,6 +52,40 @@ class DoubleLinkedList:
         target.prevNode = newNode
 
         return True
+
+    def insertAfter(self,key,data):
+        curr = self.head
+        
+        # To Handling Base Case
+        if curr.data == key:
+            self.push(data)
+            return True
+
+        # To Find The Target Node
+        while curr:
+            if curr.data == key:
+                target = curr
+                break
+            curr = curr.nextNode 
+
+        # To Check The Target
+        if target is None:
+            print("The Previous Node Cannot Be Null.")
+            return False
+
+        # Creating New Node
+        newNode = Node(data)
+
+        # Setting Next Node
+        newNode.nextNode = target.nextNode
+        target.nextNode = newNode
+
+        # Setting Previous Node
+        if newNode.nextNode is not None:
+            newNode.nextNode.prevNode = newNode
+        newNode.prevNode = target
+
+        return True
         
     def printList(self):
         curr = self.head
@@ -61,20 +95,64 @@ class DoubleLinkedList:
             curr = curr.nextNode
         print("None")
 
+    def printReverse(self):
+        last = self.head
+
+        # Finding The Last Element
+        while last and last.nextNode:
+            last = last.nextNode
+
+        # Printing In Reverse
+        print("Printing The Element In Reverse : ")
+        while last :
+            print(last.data,end=" --> ")
+            last = last.prevNode
+        print("None")
+
+    def delete(self,key):
+        curr = self.head
+        target = None
+
+        #Finding The Target
+        while curr:
+            if curr.data == key:
+                target = curr
+                break
+            curr = curr.nextNode
+
+        # If Element Is Not Prasent In The List
+        if target is None:
+            print("Element Not Found In The List")
+            return False
+
+        # Deleting The Element
+        target.prevNode.nextNode = target.nextNode
+        target.nextNode.prevNode = target.prevNode
+        target = None
+        
+        return True
+
 #  Creating The List And Adding Elements
 l = DoubleLinkedList()
 l.push(1)
 l.push(3)
+l.push(4)
 l.push(4)
 l.push(5)
 
 # Inserting Element
 print("Before Inserting Element")
 l.printList()
-l.insert(1,2)
+l.insertAfter(1,0)
+l.insertBefore(1,2)
 print("After Inserting Element")
 l.printList()
 
 # Checking Funtion If It Works For Base Case
-l.insert(5,6)
+l.insertBefore(5,6)
 l.printList()
+
+# Deleting An Element
+l.delete(4)
+l.printList()
+l.printReverse()
