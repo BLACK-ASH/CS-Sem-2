@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int row = 3, col = 3;
+    int row = 2, col = 2;
     int matrix[row][col];
 
     // Input
