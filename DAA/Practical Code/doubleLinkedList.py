@@ -5,15 +5,29 @@ class Node:
         self.prevNode = prevNode
 
 class DoubleLinkedList:
+
     def __init__(self):
         self.head = None
+        self.tail = None
 
+    def __grab(self,key):
+        target = self.head
+        while target :
+            if target.data == key:
+                return target
+            target = target.nextNode
+            
+        return None
+            
     def push(self,data):
         newNode = Node(data)
         newNode.nextNode = self.head
         
         if self.head is not None:
             self.head.prevNode = newNode
+
+        if self.head is None:
+            self.tail = newNode
 
         self.head = newNode
 
@@ -83,8 +97,30 @@ class DoubleLinkedList:
         # Setting Previous Node
         if newNode.nextNode is not None:
             newNode.nextNode.prevNode = newNode
+
+        if newNode.nextNode is None:
+            self.tail = newNode
         newNode.prevNode = target
 
+        return True
+
+    # Append Function
+    def append(self,data):
+        # 1. Using Existing Function
+        #self.insertAfter(self.tail.data,data)
+        #return True
+
+        # 2. Using Tail
+        
+        # Creating New Node
+        newNode = Node(data)
+
+        # Setting Node
+        self.tail.nextNode = newNode
+        newNode.prevNode = self.tail
+
+        self.tail = newNode
+        
         return True
         
     def printList(self):
@@ -96,11 +132,7 @@ class DoubleLinkedList:
         print("None")
 
     def printReverse(self):
-        last = self.head
-
-        # Finding The Last Element
-        while last and last.nextNode:
-            last = last.nextNode
+        last = self.tail
 
         # Printing In Reverse
         print("Printing The Element In Reverse : ")
