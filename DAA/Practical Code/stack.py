@@ -7,8 +7,7 @@ class Stack:
         return True
 
     def pop(self):
-        if not self.isEmpty:
-            self.stack.pop(-1)
+        self.stack.pop(-1)
         return True
 
     def isEmpty(self):
@@ -20,20 +19,23 @@ class Stack:
     def print(self):
         print(self.stack)
 
+stack = Stack()
+# Adding Elements
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+stack.push(5)
 
-str = input("Enter Equation To Check It Is Correct : ")
+# Printing Elements
+stack.print()
 
+# Removing Elements
+stack.pop()
+stack.pop()
+stack.pop()
+stack.print()
 
-def check(str):
-    test = Stack()
-    for e in str:
-        if e in ["[","{","(","]","}",")"]:
-            test.push(e)
-        elif e in ["]","}",")"]:
-            test.pop()
-
-    print(test.isEmpty())
-
-            
-            
-        
+# Checking If Stack Is Empty And Length Of Stack  
+print(stack.isEmpty())
+print(stack.length())

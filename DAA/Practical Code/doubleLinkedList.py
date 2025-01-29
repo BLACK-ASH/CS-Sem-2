@@ -76,11 +76,7 @@ class DoubleLinkedList:
             return True
 
         # To Find The Target Node
-        while curr:
-            if curr.data == key:
-                target = curr
-                break
-            curr = curr.nextNode 
+        target = self.__grab(key)
 
         # To Check The Target
         if target is None:
@@ -187,4 +183,10 @@ l.printList()
 # Deleting An Element
 l.delete(4)
 l.printList()
+
+# Printing Element in Reverse
 l.printReverse()
+
+#  Appending Element
+l.append(-1)
+l.printList()

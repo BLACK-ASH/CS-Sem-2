@@ -68,8 +68,9 @@ class LinkedList:
     def printNode(self):
         curr = self.head
         while curr:
-            print(curr.data)
+            print(curr.data,end=" -> ")
             curr = curr.getNextNode()
+        print("None")
 
     # Deleting A Node
     def deleteNode(self, key):
