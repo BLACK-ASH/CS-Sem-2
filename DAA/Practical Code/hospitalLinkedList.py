@@ -39,13 +39,15 @@ class PatientList:
             return 2
 
         i = 0
-        while i >= self.__maxBed:
-            if self.__bedsOccupied[i]-self.__bedsOccupied[i+1] > 1:
-                return i + 1
+        while i < len(self.__bedsOccupied)-1:
+            if self.__bedsOccupied[i+1]-self.__bedsOccupied[i] > 1:
+                return i + 1 + 1
+            i+=1
 
         return self.__bedsOccupied[-1] + 1
 
     def insert(self,name,age,disease,reports,bedNo):
+        print(bedNo)
         if self.head == None:
             patient = Patient(bedNo,name,age,disease,reports)
             patient.next = self.head
@@ -58,13 +60,17 @@ class PatientList:
             self.head = patient
             return True
         
-        target = self.head
-        while target:
-            if target.bedNo <= bedNo:
+        curr=self.head
+        nextNode = self.head.next
+        while curr and nextNode:
+            if curr.bedNo == bedNo:
                 break
+            curr = nextNode
+            nextNode = nextNode.next
+            
         patient = Patient(bedNo,name,age,disease,reports)
-        patient.next = target.next
-        target.next = patient
+        curr.next = patient
+        patient.next = nextNode
         return True
 
     def isBedAvailable(self,bedNo):
@@ -93,18 +99,38 @@ class PatientList:
                 return False
 
             # Admiting Patient:
+            self.__bedOccupied+=1
             self.insert(name,age,disease,reports,bedNo)
             self.__bedsOccupied.append(bedNo)
+            
             return True
             
         # Giving Bed No
         if bedNo == None:
             bedNo = self.__giveBedNo()
 
+        self.__bedOccupied+=1
         self.insert(name,age,disease,reports,bedNo)
         self.__bedsOccupied.append(bedNo)
-
+        
         return True
+
+    def discharge(self,bedNo):
+        curr=self.head
+        prev = self.head
+        while curr and prev:
+            if curr.bedNo == bedNo:
+                break
+            prev = curr
+            curr = curr.next
+
+        prev.next = curr.next
+        curr = None
+        self.__bedsOccupied.remove(bedNo)
+        self.__bedOccupied -=1
+        
+        return True
+        
 
     def print(self):
         target = self.head
