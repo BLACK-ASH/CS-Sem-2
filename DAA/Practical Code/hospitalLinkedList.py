@@ -32,14 +32,40 @@ class PatientList:
         return None
 
     def __giveBedNo (self):
+        if len(self.__bedsOccupied) == 0:
+            return 1
+
+        if len(self.__bedsOccupied) == 1:
+            return 2
+
         i = 0
-        
-        if len(self.__bedsOccupied) <= 2:
-            return len(self.__bedsOccupied)+1
-        
-        while i <= self.__maxBed:
-            if self.__bedsOccupied[0]-self.__bedsOccupied[i+1] > 1:
+        while i >= self.__maxBed:
+            if self.__bedsOccupied[i]-self.__bedsOccupied[i+1] > 1:
                 return i + 1
+
+        return self.__bedsOccupied[-1] + 1
+
+    def insert(self,name,age,disease,reports,bedNo):
+        if self.head == None:
+            patient = Patient(bedNo,name,age,disease,reports)
+            patient.next = self.head
+            self.head = patient
+            return True
+        
+        if bedNo-1 == self.head.bedNo:
+            patient = Patient(bedNo,name,age,disease,reports)
+            patient.next = self.head
+            self.head = patient
+            return True
+        
+        target = self.head
+        while target:
+            if target.bedNo <= bedNo:
+                break
+        patient = Patient(bedNo,name,age,disease,reports)
+        patient.next = target.next
+        target.next = patient
+        return True
 
     def isBedAvailable(self,bedNo):
         if bedNo == None:
@@ -67,37 +93,23 @@ class PatientList:
                 return False
 
             # Admiting Patient:
-            target = self.head
-            prev = None
-            while target:
-                if target.bedNo == bedNo:
-                    break
-                prev = target
-                target = target.next
-            
-            patient = Patient(bedNo,name,age,disease,reports)
-            if target and prev:
-                prev.next = patient
-                patient.next = target
-                return True
+            self.insert(name,age,disease,reports,bedNo)
+            self.__bedsOccupied.append(bedNo)
+            return True
             
         # Giving Bed No
         if bedNo == None:
             bedNo = self.__giveBedNo()
-        self.__bedsOccupied.append(bedNo)
 
-        # Creating Patient
-        patient = Patient(bedNo,name,age,disease,reports)
-        patient.next = self.head
-        self.head = patient
-        self.__bedOccupied +=1
+        self.insert(name,age,disease,reports,bedNo)
+        self.__bedsOccupied.append(bedNo)
 
         return True
 
     def print(self):
         target = self.head
         while target:
-            print({"BedNo" : target.bedNo,"Data" : target.data})
+            print({"BedNo" : target.bedNo,"Name" : target.data["name"]})
             target = target.next
         
 
