@@ -10,7 +10,7 @@ class DoubleLinkedList:
         self.head = None
         self.tail = None
 
-    def __grab(self,key):
+    def grab(self,key):
         target = self.head
         while target :
             if target.data == key:
@@ -76,7 +76,7 @@ class DoubleLinkedList:
             return True
 
         # To Find The Target Node
-        target = self.__grab(key)
+        target = self.grab(key)
 
         # To Check The Target
         if target is None:

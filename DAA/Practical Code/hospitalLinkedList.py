@@ -48,6 +48,9 @@ class PatientList:
             return False
         return bedNo not in self.__bedsOccupied
 
+    def insert(self,,name,age,disease,reports,bedNo):
+        if bedNo
+
         
     def admit(self,name,age,disease,reports,bedNo = None):
         # If There Is No Bed To Admit
