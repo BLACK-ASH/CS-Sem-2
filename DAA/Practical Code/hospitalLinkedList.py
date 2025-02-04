@@ -38,6 +38,8 @@ class PatientList:
         if len(self.__bedsOccupied) == 1:
             return 2
 
+        
+        self.__bedsOccupied.sort()
         i = 0
         while i < len(self.__bedsOccupied)-1:
             if self.__bedsOccupied[i+1]-self.__bedsOccupied[i] > 1:
@@ -47,30 +49,30 @@ class PatientList:
         return self.__bedsOccupied[-1] + 1
 
     def insert(self,name,age,disease,reports,bedNo):
-        print(bedNo)
         if self.head == None:
             patient = Patient(bedNo,name,age,disease,reports)
             patient.next = self.head
             self.head = patient
             return True
         
-        if bedNo-1 == self.head.bedNo:
+        if bedNo >= self.head.bedNo:
             patient = Patient(bedNo,name,age,disease,reports)
             patient.next = self.head
             self.head = patient
             return True
         
         curr=self.head
-        nextNode = self.head.next
-        while curr and nextNode:
-            if curr.bedNo == bedNo:
+        prev = self.head
+        while curr:
+            if curr.bedNo <= bedNo:
                 break
-            curr = nextNode
-            nextNode = nextNode.next
+            prev = curr
+            curr = curr.next
+            
             
         patient = Patient(bedNo,name,age,disease,reports)
-        curr.next = patient
-        patient.next = nextNode
+        patient.next = prev.next
+        prev.next = patient
         return True
 
     def isBedAvailable(self,bedNo):
@@ -79,10 +81,6 @@ class PatientList:
         if bedNo > self.__maxBed and bedNo <0:
             return False
         return bedNo not in self.__bedsOccupied
-
-    def insert(self,,name,age,disease,reports,bedNo):
-        if bedNo
-
         
     def admit(self,name,age,disease,reports,bedNo = None):
         # If There Is No Bed To Admit
@@ -133,14 +131,43 @@ class PatientList:
         self.__bedOccupied -=1
         
         return True
+
+    def getPatientDetails(self,bedNo):
+        patient = self.__getPatient(bedNo)
+        print(patient.data)
         
 
     def print(self):
+        print("Department Name : ",self.deptName)
         target = self.head
         while target:
             print({"BedNo" : target.bedNo,"Name" : target.data["name"]})
             target = target.next
         
 
+# Creating Department
+l = PatientList("ENT",5)
 
-        
+# Admiting Patinet
+l.admit("John Doe",25,"abc","abc")
+l.admit("John Doe ka bhai",27,"abcd","abcd")
+
+# Admiting Patinet By Bed NO
+l.admit("Jane Doe",29,"cd","cd",5)
+l.print()
+
+# Handling If Bed Not Available
+l.admit("Jane Doe 2",29,"cd","cd",5)
+l.admit("Jane Doe 2",29,"cd","cd")
+l.print()
+l.admit("Jane Doe 2",29,"cd","cd")
+l.print()
+
+# Getting Patient Details
+l.getPatientDetails(2)
+
+# Discharge
+l.discharge(2)
+l.print()
+l.admit("Jane Doe 3",29,"cd","cd")
+l.print()
