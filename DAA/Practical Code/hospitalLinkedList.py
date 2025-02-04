@@ -81,6 +81,12 @@ class PatientList:
         if bedNo > self.__maxBed and bedNo <0:
             return False
         return bedNo not in self.__bedsOccupied
+
+    def availableBeds(self):
+        beds = list(range(1,self.__maxBed+1))
+        availableBed = list(set(beds)  - set(self.__bedsOccupied))
+        print("The Following Beds Are Available")
+        print(availableBed)
         
     def admit(self,name,age,disease,reports,bedNo = None):
         # If There Is No Bed To Admit
@@ -93,10 +99,7 @@ class PatientList:
             # Checking If Bed Is Available
             if not self.isBedAvailable(bedNo):
                 print("Bed Not Available")
-                beds = list(range(1,self.__maxBed+1))
-                availableBed = list(set(beds)  - set(self.__bedsOccupied))
-                print("The Following Beds Are Available")
-                print(availableBed)
+                self.availableBeds()
                 return False
 
             # Admiting Patient:
@@ -160,7 +163,7 @@ l.print()
 l.admit("Jane Doe 2",29,"cd","cd",5)
 l.admit("Jane Doe 2",29,"cd","cd")
 l.print()
-l.admit("Jane Doe 2",29,"cd","cd")
+l.admit("Jane Doe 3",29,"cd","cd")
 l.print()
 
 # Getting Patient Details
@@ -169,5 +172,5 @@ l.getPatientDetails(2)
 # Discharge
 l.discharge(2)
 l.print()
-l.admit("Jane Doe 3",29,"cd","cd")
+l.admit("Jane Doe 4",29,"cd","cd")
 l.print()
