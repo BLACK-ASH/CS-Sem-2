@@ -9,8 +9,8 @@ print("The Factorial Of 5: ",factorial(5))
 print("The Factorial Of 10: ",factorial(10))
 print("The Factorial Of 15: ",factorial(15))
 
-# Fibonacci
 
+# Fibonacci
 def fibonacci(n):
     if n < 0:
         return False
@@ -20,6 +20,6 @@ def fibonacci(n):
 
 n = int(input("Enter A Number For Fibonacci Series : "))
 for i in range(0,n+1):
-    print(fibonacci(i),end =" ")
+    print(fibonacci(i),end=" ")
     
     
