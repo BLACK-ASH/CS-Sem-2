@@ -174,3 +174,37 @@ l.discharge(2)
 l.print()
 l.admit("Jane Doe 4",29,"cd","cd")
 l.print()
+
+
+"""
+Department Name :  ENT
+{'BedNo': 5, 'Name': 'Jane Doe'}
+{'BedNo': 2, 'Name': 'John Doe ka bhai'}
+{'BedNo': 1, 'Name': 'John Doe'}
+Bed Not Available
+The Following Beds Are Available
+[3, 4]
+Department Name :  ENT
+{'BedNo': 5, 'Name': 'Jane Doe'}
+{'BedNo': 3, 'Name': 'Jane Doe 2'}
+{'BedNo': 2, 'Name': 'John Doe ka bhai'}
+{'BedNo': 1, 'Name': 'John Doe'}
+Department Name :  ENT
+{'BedNo': 5, 'Name': 'Jane Doe'}
+{'BedNo': 4, 'Name': 'Jane Doe 3'}
+{'BedNo': 3, 'Name': 'Jane Doe 2'}
+{'BedNo': 2, 'Name': 'John Doe ka bhai'}
+{'BedNo': 1, 'Name': 'John Doe'}
+{'name': 'John Doe ka bhai', 'age': 27, 'disease': 'abcd', 'reports': 'abcd'}
+Department Name :  ENT
+{'BedNo': 5, 'Name': 'Jane Doe'}
+{'BedNo': 4, 'Name': 'Jane Doe 3'}
+{'BedNo': 3, 'Name': 'Jane Doe 2'}
+{'BedNo': 1, 'Name': 'John Doe'}
+Department Name :  ENT
+{'BedNo': 5, 'Name': 'Jane Doe'}
+{'BedNo': 4, 'Name': 'Jane Doe 3'}
+{'BedNo': 3, 'Name': 'Jane Doe 2'}
+{'BedNo': 2, 'Name': 'Jane Doe 4'}
+{'BedNo': 1, 'Name': 'John Doe'}
+"""
