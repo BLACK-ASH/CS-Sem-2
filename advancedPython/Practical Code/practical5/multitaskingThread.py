@@ -1,4 +1,4 @@
-# Mutitasking Thread
+# Multitasking Thread
 from time import sleep
 from threading import Thread
 
