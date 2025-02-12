@@ -16,8 +16,8 @@ nose = c.create_oval(95,90,110,105,fill = "red")
 # Eye One
 eye11 = c.create_oval(60,45,95,95,fill = "black")
 eye12 = c.create_oval(61,43,95,93,fill = "white")
-eye13 = c.create_oval(70,65,85,90,fill = "black")
-eye13 = c.create_oval(73,68,81,86,fill = "white")
+eye13 = c.create_oval(70,67,85,90,fill = "black")
+eye13 = c.create_oval(73,70,81,86,fill = "white")
 
 # Eye Two
 eye11 = c.create_oval(110,45,142,95,fill = "black")

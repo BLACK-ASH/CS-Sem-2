@@ -1,6 +1,6 @@
 from abc import ABC,abstractmethod
 
-class Animal (ABC):
+class Animal(ABC):
     def sound(self):
         pass
 
@@ -11,5 +11,3 @@ class Dog(Animal):
 dog = Dog()
 print(dog.sound())
 
-
-#https://www.canva.com/design/DAGcvj-ebNc/Cf39hcwQc2xvUx3m-xgTow/edit
