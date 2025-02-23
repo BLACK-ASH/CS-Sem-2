@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Box</title>
+    <style>
+        body {
+            background: aliceblue;
+            color: blueviolet;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .button {
+            margin: 0 auto;
+            padding: 8px 16px;
+            font: bold 14px sans-serif;
+            color: aliceblue;
+            background: blueviolet;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Confirm Box</h1>
+    <button class="button" onclick="myFunction()">Click Me</button>
+
+    <script>
+        // JavaScript Confirm Box
+        function myFunction() {
+            let person = confirm("Are You Sure?");
+            if (person == true) {
+                document.write("You Pressed OK!");
+            } else {
+                document.write("You Pressed Cancel!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
