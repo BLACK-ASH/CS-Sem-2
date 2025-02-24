@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Object</title>
+    <style>
+        body {
+            background: aliceblue;
+            color: blueviolet;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript String Object</h1>
+    <script>
+        // JavaScript String Object
+        // String Object Is Used For String Manipulation
+        let a = new String("Hello World");
+        let str = "Hello World";
+
+        document.write("Through New Keyword = ", a,"<br>");
+        document.write("Through String Literal = ", str,"<br>");
+        document.write("<br>");
+        
+        // String Object Methods
+        // charAt() Method Is Used For Returning The Character At Specified Index
+        document.write("charAt() Method Is Used For Returning The Character At Specified Index<br>");
+        document.write("string = ", str,"<br>");
+        document.write("index = 0 = ", a.charAt(0),"<br>");
+        document.write("index = 1 = ", a.charAt(1),"<br>");
+        document.write("<br>");
+        
+        // concat() Method Is Used For Concatenating Two Or More Strings
+        document.write("concat() Method Is Used For Concatenating Two Or More Strings<br>");
+        document.write("string1 = ", str,"<br>");
+        document.write("string2 = ", str.concat(" How Are You"),"<br>");
+        document.write("<br>");
+        
+        // indexOf() Method Is Used For Returning The Index Of The First Occurrence Of A Substring
+        document.write("indexOf() Method Is Used For Returning The Index Of The First Occurrence Of A Substring<br>");
+        document.write("string =", str,"<br>");
+        document.write("substring = How = ", str.indexOf("How"),"<br>");
+        document.write("<br>");
+        
+        // lastIndexOf() Method Is Used For Returning The Index Of The Last Occurrence Of A Substring
+        document.write("lastIndexOf() Method Is Used For Returning The Index Of The Last Occurrence Of A Substring<br>");
+        document.write("string = ", str,"<br>");
+        document.write("substring = How = ", str.lastIndexOf("How"),"<br>");
+        document.write("<br>");
+        
+        // length() Method Is Used For Returning The Length Of A String
+        document.write("length() Method Is Used For Returning The Length Of A String<br>");
+        document.write("string = ", str,"<br>");
+        document.write("length = ", str.length,"<br>");
+        document.write("<br>");
+        
+        // slice() Method Is Used For Returning A Section Of A String
+        document.write("slice() Method Is Used For Returning A Section Of A String<br>");
+        document.write("string = ", str,"<br>");
+        document.write("start = 0 end = 5 = ", str.slice(0, 5),"<br>");
+        document.write("<br>");
+        
+        // toLowerCase() Method Is Used For Converting A String To Lowercase
+        document.write("toLowerCase() Method Is Used For Converting A String To Lowercase<br>");
+        document.write("string = ", str,"<br>");
+        document.write("string = ", str.toLowerCase(),"<br>");
+        document.write("<br>");
+        
+        // toUpperCase() Method Is Used For Converting A String To Uppercase
+        document.write("toUpperCase() Method Is Used For Converting A String To Uppercase<br>");
+        document.write("string = ", str,"<br>");
+        document.write("string = ", str.toUpperCase(),"<br>");
+        document.write("<br>");
+        
+        // trim() Method Is Used For Removing Whitespace From Both Ends Of A String
+        document.write("trim() Method Is Used For Removing Whitespace From Both Ends Of A String<br>");
+        let unTrim = "         Hello World      ";
+        document.write("string = ", unTrim,"<br>");
+        document.write("string = ", unTrim.trim(),"<br>");
+        document.write("<br>");
+
+    </script>
+</body>
+</html>
