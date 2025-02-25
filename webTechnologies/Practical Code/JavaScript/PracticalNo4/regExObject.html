@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegEx Object</title>
+    <style>
+        body {
+            background: aliceblue;
+            color: blueviolet;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript RegEx Object</h1>
+    <script>
+        // JavaScript RegEx Object
+        // RegEx Object Is Used For Pattern Matching
+        let a = "This Is An Example Of JavaScript RegEx";
+        let reg = /JavaScript/i;
+        document.write("String : ", a, "<br>")
+
+        // test() Method Is Used For Checking If A String Matches A Pattern
+        document.write("test() Method Is Used For Checking If A String Matches A Pattern<br>");
+        document.write("RegEx : ", reg, "<br>");
+        document.write("test() Method Result = ", reg.test(a), "<br>");
+        document.write("<br>");
+    </script>
+</body>
+
+</html>
