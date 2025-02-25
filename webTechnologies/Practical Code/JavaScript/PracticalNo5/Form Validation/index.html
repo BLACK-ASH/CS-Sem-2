@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Basic Of Form Validation</h1>
+    </div>
+
+    <form name="myForm" action="handleSubmit">
+
+        <div>
+            <label for="username">Enter Your Name : </label>
+            <input class="input" type="text" id="username" name="Username" required placeholder="Enter your username">
+        </div>
+
+        <div>
+            <label for="email">Enter Your Email : </label>
+            <input class="input" type="email" id="email" name="email" required placeholder="Enter your email address">
+        </div>
+
+        <div>
+            <label for="password">Enter Your Password : </label>
+            <input class="input" type="password" id="password" required name="password" placeholder="Enter your password">
+        </div>
+        <div>
+            <label for="password">Confirm Password : </label>
+            <input class="input" type="password" id="confirmPassword" required name="confirmPassword" placeholder="confirm password">
+        </div>
+
+        <div>
+            <p>Select your Gender</p>
+            <input type="radio" id="Male" required name="gender" value="male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" required name="gender" value="female">
+            <label for="Female">Female</label>
+        </div>
+
+        <div>
+            <label for="age">Enter Your Age : </label>
+            <input class="input" type="number" id="age" name="age" required placeholder="Enter your age">
+        </div>
+
+        <div>
+            <input class="button" type="submit" value="Submit">
+            <input class="button" type="button" onclick="print()" value="Print Form">
+        </div>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

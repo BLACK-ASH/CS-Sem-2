@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: aliceblue;
+    color: blueviolet;
+}
+
+.nav {
+    background: rgb(43, 226, 119);
+    padding: 1rem 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button {
+    margin: 8px 16px;
+    padding: 8px 16px;
+    font: bold 14px sans-serif;
+    color: aliceblue;
+    background: blueviolet;
+    border: none;
+    border-radius: 4px;
+}
+
+div {
+    margin-bottom: 1rem;
+}
