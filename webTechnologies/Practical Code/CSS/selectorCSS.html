@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <link rel="stylesheet" href="selectoCSS.css">
+    <style>
+        body {
+            background: aliceblue;
+            color: blueviolet;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div{
+            margin: 8px 16px;
+            padding: 8px 16px;
+            font: bold 14px sans-serif;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        .internal-css {
+            background: #3c6e7c;
+        }
+
+        .internal-css-h {
+            color: rgb(128, 70, 0);
+        }
+
+        .internal-css-p {
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selector</h1>
+    <div style="background: #3c7c48;">
+        <h2 style="color: red;">inline CSS</h2>
+        <p style="color: yellow;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque aliquid doloremque placeat!</p>
+    </div>
+    <div class="internal-css">
+        <h2 class="internal-css-h">Internal CSS</h2>
+        <p class="internal-css-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque aliquid doloremque
+            placeat!</p>
+    </div>
+    <div class="external-css">
+        <h2 class="external-css-h">External CSS</h2>
+        <p class="external-css-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque aliquid doloremque placeat!</p>
+    </div>
+</body>
+
+</html>
