@@ -45,6 +45,7 @@ class LinkedList:
     # Adding A Node In A Certain Position In A Linked List
     def addCustomerAtPos(self,customer,salesman,pos):
         newNode = Node(customer,salesman,pos)
+        previousNode = None
         currentNode = self.head
         currentPosition = 0
         while True:
@@ -70,7 +71,7 @@ class LinkedList:
         temp = self.head
         if (temp is not None):
             if (temp.data["customer"] == key):
-                self.head == temp.nextNode
+                self.head = temp.nextNode
                 temp = None
                 return
         while (temp is not None):
