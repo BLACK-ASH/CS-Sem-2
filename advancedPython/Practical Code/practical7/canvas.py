@@ -38,11 +38,6 @@ n21 = c.create_line (115,110,145,100)
 n22 = c.create_line (115,115,145,115)
 n23 = c.create_line (115,120,145,130)
 
-
-
-
-
-
 c.pack()
 
 root.mainloop()

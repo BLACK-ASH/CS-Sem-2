@@ -1,4 +1,4 @@
 import tkinter
 
-m = tkinter.Tk(className = "Ashif")
+m = tkinter.Tk(className = "BlackAsh")
 m.mainloop()
