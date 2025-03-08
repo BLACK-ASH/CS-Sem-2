@@ -54,13 +54,16 @@ function handleSubmit(e) {
 
     if (checkName(name) && checkEmail(email) && checkPassword(password, confirmPassword) && checkAge(age)) {
         alert("Form submitted successfully");
-    }   
+    }
+
+    console.log({
+        "Name": name,
+        "Email": email,
+        "Age": age
+    })
 
     // Reset Form
-    name = "";
-    email = "";
-    password = "";
-    confirmPassword = "";
-    age = "";
+    document.myForm.reset();
+
 }
 
