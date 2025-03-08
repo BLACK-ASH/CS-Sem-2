@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX HOVER Event</title>
+    <style>
+        body {
+            background: aliceblue;
+            color: blueviolet;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .button {
+            margin: 0 auto;
+            padding: 8px 16px;
+            font: bold 14px sans-serif;
+            color: aliceblue;
+            background: blueviolet;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AJAX Hover Event</h1>
+    <button class="button">Hover On Me</button>
+    <script>
+        let button = document.querySelector(".button");
+        button.addEventListener("mouseover", function () {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "hover.txt", true);
+            xhr.onload = function () {
+                document.body.innerHTML += "<br>";
+                document.body.innerHTML += "<br>";
+                document.body.innerHTML += (xhr.response);
+            }
+            xhr.send();
+        });
+    </script>
+</body>
+
+</html>
