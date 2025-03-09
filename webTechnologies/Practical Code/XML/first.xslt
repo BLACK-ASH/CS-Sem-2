@@ -5,27 +5,28 @@
             <head>
                 <style>
                     table {
-                    width: 100%;
+                    width: 400px;
                     border-collapse: collapse;
                     }
-                    th, td {
-                    padding: 8px 12px;
-                    text-align: left;
-                    border: 1px solid #ddd;
+                    th{
+                    background:teal;
                     }
-                    th {
-                    background-color: #f2f2f2;
+                    td,th{
+                    text-align: left;
+                    border: 1px solid black;
+                    font:bolder;
+                    padding:10px;
                     }
                 </style>
             </head>
             <body>
-                <h1>Bookstore</h1>
+                <h1>MY FIRST CODE IN XML AND XSLT</h1>
                 <table>
                     <tr>
                         <th>Title</th>
                         <th>Author</th>
+                        <th>Year</th>
                         <th>Price</th>
-                        <th>Genre</th>
                     </tr>
                     <xsl:for-each select="book">
                         <tr>
@@ -36,13 +37,14 @@
                                 <xsl:value-of select="author" />
                             </td>
                             <td>
-                                <xsl:value-of select="price" />
+                                <xsl:value-of select="year" />
                             </td>
                             <td>
-                                <xsl:value-of select="genre" />
+                                <xsl:value-of select="price" />
                             </td>
                         </tr>
                     </xsl:for-each>
+
                 </table>
             </body>
         </html>

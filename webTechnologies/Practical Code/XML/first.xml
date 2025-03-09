@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<?xml-stylesheet type="text/xsl" href="first.xslt"?>
 
 <bookstore>
-    <book category="cooking">
+    <book>
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
         <year>2005</year>
         <price>30.00</price>
     </book>
-    <br></br>
-    <book category="cooking">
+    <book>
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
         <year>2005</year>
         <price>30.00</price>
     </book>
-    <br></br>
-    <book category="cooking">
+    <book>
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
         <year>2005</year>
         <price>30.00</price>
     </book>
-    <br></br>
-    <book category="cooking">
+    <book>
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
         <year>2005</year>
         <price>30.00</price>
     </book>
-    <br></br>
-    <book category="cooking">
+    <book>
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
         <year>2005</year>
